@@ -2,6 +2,7 @@ import sqlite3
 import os.path
 
 def update_row(cursor, con):
+    print('------------------PRINT ALL---------------------')
     integer = int(input('Enter id: '))
     name = str(input('Enter name: '))
     email = str(input('Enter email: '))
@@ -11,12 +12,14 @@ def update_row(cursor, con):
     con.commit()
     
 def delete_row(cursor, con):
+    print('------------------PRINT ALL---------------------')
     integer = int(input('Enter id: '))
     sql_delete_query = f"""DELETE from user where id = {integer}"""
     cursor.execute(sql_delete_query)
     con.commit()    
 
 def print_all(cursor):
+    print('------------------PRINT ALL---------------------')
     cursor.execute("SELECT * FROM user")
 
     rows = cursor.fetchall()
