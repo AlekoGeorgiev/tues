@@ -8,7 +8,7 @@ IP = "34.77.60.185"
 PORT = 8080
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-db_path = os.path.join(BASE_DIR, "sqlite.db")
+db_path = os.path.join(BASE_DIR, "site.db")
 con = sqlite3.connect(db_path)
 cursor = con.cursor()
 
